@@ -17,7 +17,7 @@ import (
 
 	kmsservice "github.com/trustbloc/kms-go/kms"
 
-	"github.com/trustbloc/kms-go/spi/kms"
+	"github.com/trustbloc/kms-go/internal/api/kms"
 	"github.com/trustbloc/kms-go/spi/secretlock"
 	"github.com/trustbloc/kms-go/spi/storage"
 )

@@ -13,7 +13,7 @@ import (
 
 	"github.com/google/tink/go/subtle/random"
 
-	kmsapi "github.com/trustbloc/kms-go/spi/kms"
+	kmsapi "github.com/trustbloc/kms-go/internal/api/kms"
 
 	"github.com/trustbloc/kms-go/kms"
 )

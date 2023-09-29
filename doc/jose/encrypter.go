@@ -35,7 +35,7 @@ import (
 	"github.com/trustbloc/kms-go/doc/jose/jwk"
 	"github.com/trustbloc/kms-go/util/cryptoutil"
 
-	cryptoapi "github.com/trustbloc/kms-go/spi/crypto"
+	cryptoapi "github.com/trustbloc/kms-go/internal/api/crypto"
 )
 
 // EncAlg represents the JWE content encryption algorithm.

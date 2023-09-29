@@ -10,8 +10,8 @@ import (
 	"fmt"
 
 	"github.com/trustbloc/kms-go/crypto/tinkcrypto"
+	kmsapi "github.com/trustbloc/kms-go/internal/api/kms"
 	"github.com/trustbloc/kms-go/kms/localkms"
-	kmsapi "github.com/trustbloc/kms-go/spi/kms"
 	"github.com/trustbloc/kms-go/spi/secretlock"
 	"github.com/trustbloc/kms-go/wrapper/api"
 )

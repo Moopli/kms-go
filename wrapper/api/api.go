@@ -9,7 +9,7 @@ import (
 	"errors"
 
 	"github.com/trustbloc/kms-go/doc/jose/jwk"
-	kmsapi "github.com/trustbloc/kms-go/spi/kms"
+	kmsapi "github.com/trustbloc/kms-go/internal/api/kms"
 )
 
 // Suite provides a suite of kms+crypto functions.

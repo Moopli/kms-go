@@ -10,7 +10,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/trustbloc/kms-go/spi/kms"
+	"github.com/trustbloc/kms-go/internal/api/kms"
 )
 
 // newReader will create a new local storage storeReader of a keyset with ID value = keysetID

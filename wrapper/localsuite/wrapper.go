@@ -7,7 +7,7 @@ package localsuite
 
 import (
 	"github.com/trustbloc/kms-go/doc/jose/jwk"
-	"github.com/trustbloc/kms-go/spi/kms"
+	"github.com/trustbloc/kms-go/internal/api/kms"
 	"github.com/trustbloc/kms-go/wrapper/api"
 )
 

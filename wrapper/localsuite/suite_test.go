@@ -9,10 +9,10 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
+	kmsapi "github.com/trustbloc/kms-go/internal/api/kms"
 	mockstorage "github.com/trustbloc/kms-go/internal/mock/storage"
 	"github.com/trustbloc/kms-go/kms"
 	"github.com/trustbloc/kms-go/secretlock/noop"
-	kmsapi "github.com/trustbloc/kms-go/spi/kms"
 )
 
 func TestSuite(t *testing.T) {

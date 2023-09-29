@@ -18,11 +18,11 @@ import (
 	"github.com/google/tink/go/keyset"
 	"github.com/trustbloc/bbs-signature-go/bbs12381g2pub"
 
-	kmsapi "github.com/trustbloc/kms-go/spi/kms"
+	kmsapi "github.com/trustbloc/kms-go/internal/api/kms"
 
 	"github.com/trustbloc/kms-go/spi/secretlock"
 
-	cryptoapi "github.com/trustbloc/kms-go/spi/crypto"
+	cryptoapi "github.com/trustbloc/kms-go/internal/api/crypto"
 
 	"github.com/trustbloc/kms-go/doc/util/jwkkid"
 	"github.com/trustbloc/kms-go/kms"

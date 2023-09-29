@@ -6,19 +6,45 @@ SPDX-License-Identifier: Apache-2.0
 
 package crypto
 
-import (
-	"github.com/trustbloc/kms-go/internal/api/crypto"
-)
+// WrapKeyOptions holds options for key wrapping.
+type WrapKeyOptions struct {
+	senderKey  interface{}
+	useXC20PKW bool
+	tag        []byte
+	epk        *PrivateKey
+}
 
 // NewOpt creates a new empty wrap key option.
 // Not to be used directly. It's intended for implementations of Crypto interface
 // Use WithSender() option function below instead.
-func NewOpt() *crypto.WrapKeyOptions {
-	return crypto.NewOpt()
+func NewOpt() *WrapKeyOptions { // nolint // unexported type doesn't need to be used outside of crypto package
+	return &WrapKeyOptions{}
+}
+
+// SenderKey gets the Sender key to be used for key wrapping using a sender key (authcrypt).
+// Not to be used directly. It's intended for implementations of Crypto interface.
+// Use WithSender() option function below instead.
+func (pk *WrapKeyOptions) SenderKey() interface{} {
+	return pk.senderKey
+}
+
+// UseXC20PKW instructs to use XC20P key wrapping as apposed to the default A256KW.
+func (pk *WrapKeyOptions) UseXC20PKW() bool {
+	return pk.useXC20PKW
+}
+
+// Tag used to authenticate the sender.
+func (pk *WrapKeyOptions) Tag() []byte {
+	return pk.tag
+}
+
+// EPK predefined ephemeral key to be used in key wrapping.
+func (pk *WrapKeyOptions) EPK() *PrivateKey {
+	return pk.epk
 }
 
 // WrapKeyOpts are the crypto.Wrap key options.
-type WrapKeyOpts = crypto.WrapKeyOpts
+type WrapKeyOpts func(opts *WrapKeyOptions)
 
 // WithSender option is for setting a sender key with crypto wrapping (eg: AuthCrypt). For Anoncrypt,
 // this option must not be set.
@@ -28,7 +54,9 @@ type WrapKeyOpts = crypto.WrapKeyOpts
 //   - *crypto.PublicKey (available for UnwrapKey() only)
 //   - *ecdsa.PublicKey (available for UnwrapKey() only)
 func WithSender(senderKey interface{}) WrapKeyOpts {
-	return crypto.WithSender(senderKey)
+	return func(opts *WrapKeyOptions) {
+		opts.senderKey = senderKey
+	}
 }
 
 // WithXC20PKW option is a flag option for crypto wrapping. When used, key wrapping will use XChacha20Poly1305
@@ -36,14 +64,18 @@ func WithSender(senderKey interface{}) WrapKeyOpts {
 // used in the crypto wrapping function is selected based on the type of recipient key argument of KeyWrap(), it is
 // independent of this option.
 func WithXC20PKW() WrapKeyOpts {
-	return crypto.WithXC20PKW()
+	return func(opts *WrapKeyOptions) {
+		opts.useXC20PKW = true
+	}
 }
 
 // WithTag option is to instruct the key wrapping function of the authentication tag to be used in the wrapping process.
 // It is mainly used with CBC+HMAC content encryption to authenticate the sender of an encrypted JWE message (ie
 // authcrypt/ECDH-1PU). The absence of this option means the sender's identity is not revealed (ie anoncrypt/ECDH-ES).
 func WithTag(tag []byte) WrapKeyOpts {
-	return crypto.WithTag(tag)
+	return func(opts *WrapKeyOptions) {
+		opts.tag = tag
+	}
 }
 
 // WithEPK option is to instruct the key wrapping function of the ephemeral key to be used in the wrapping process.
@@ -51,5 +83,7 @@ func WithTag(tag []byte) WrapKeyOpts {
 // one when wrapping. It is useful for Wrap() call only since Unwrap() already uses a predefined EPK. The absence of
 // this option means a new EPK will be generated internally.
 func WithEPK(epk *PrivateKey) WrapKeyOpts {
-	return crypto.WithEPK(epk)
+	return func(opts *WrapKeyOptions) {
+		opts.epk = epk
+	}
 }

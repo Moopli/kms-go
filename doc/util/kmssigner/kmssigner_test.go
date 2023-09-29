@@ -14,7 +14,7 @@ import (
 
 	mockcrypto "github.com/trustbloc/kms-go/mock/crypto"
 
-	kmsapi "github.com/trustbloc/kms-go/spi/kms"
+	kmsapi "github.com/trustbloc/kms-go/internal/api/kms"
 )
 
 func TestKMSSigner_Alg(t *testing.T) {

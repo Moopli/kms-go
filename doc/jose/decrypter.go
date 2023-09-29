@@ -23,8 +23,8 @@ import (
 	"github.com/trustbloc/kms-go/doc/jose/jwk"
 	resolver "github.com/trustbloc/kms-go/doc/jose/kidresolver"
 
-	cryptoapi "github.com/trustbloc/kms-go/spi/crypto"
-	"github.com/trustbloc/kms-go/spi/kms"
+	cryptoapi "github.com/trustbloc/kms-go/internal/api/crypto"
+	"github.com/trustbloc/kms-go/internal/api/kms"
 )
 
 // Decrypter interface to Decrypt JWE messages.

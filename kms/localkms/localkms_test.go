@@ -28,8 +28,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/trustbloc/bbs-signature-go/bbs12381g2pub"
 
-	"github.com/trustbloc/kms-go/spi/crypto"
-	kmsapi "github.com/trustbloc/kms-go/spi/kms"
+	"github.com/trustbloc/kms-go/internal/api/crypto"
+	kmsapi "github.com/trustbloc/kms-go/internal/api/kms"
 	"github.com/trustbloc/kms-go/spi/secretlock"
 
 	"github.com/trustbloc/kms-go/crypto/tinkcrypto"

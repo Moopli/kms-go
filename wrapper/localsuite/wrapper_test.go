@@ -14,9 +14,9 @@ import (
 	"github.com/go-jose/go-jose/v3"
 	"github.com/stretchr/testify/require"
 	"github.com/trustbloc/kms-go/doc/jose/jwk"
+	kmsapi "github.com/trustbloc/kms-go/internal/api/kms"
 	mockcrypto "github.com/trustbloc/kms-go/mock/crypto"
 	mockkms "github.com/trustbloc/kms-go/mock/kms"
-	kmsapi "github.com/trustbloc/kms-go/spi/kms"
 )
 
 func TestKMSCrypto_Create(t *testing.T) {

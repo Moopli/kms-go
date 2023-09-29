@@ -18,9 +18,9 @@ import (
 
 	"github.com/trustbloc/kms-go/util/cryptoutil"
 
-	"github.com/trustbloc/kms-go/spi/kms"
+	"github.com/trustbloc/kms-go/internal/api/kms"
 
-	cryptoapi "github.com/trustbloc/kms-go/spi/crypto"
+	cryptoapi "github.com/trustbloc/kms-go/internal/api/crypto"
 
 	"github.com/trustbloc/kms-go/doc/jose/jwk"
 	"github.com/trustbloc/kms-go/doc/jose/jwk/jwksupport"

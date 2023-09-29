@@ -13,7 +13,7 @@ import (
 
 	mockstorage "github.com/trustbloc/kms-go/internal/mock/storage"
 
-	kmsapi "github.com/trustbloc/kms-go/spi/kms"
+	kmsapi "github.com/trustbloc/kms-go/internal/api/kms"
 
 	"github.com/trustbloc/kms-go/spi/secretlock"
 

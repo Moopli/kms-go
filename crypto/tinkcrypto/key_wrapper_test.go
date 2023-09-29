@@ -28,7 +28,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/crypto/curve25519"
 
-	"github.com/trustbloc/kms-go/spi/crypto"
+	"github.com/trustbloc/kms-go/internal/api/crypto"
 
 	"github.com/trustbloc/kms-go/crypto/tinkcrypto/primitive/composite/ecdh"
 	"github.com/trustbloc/kms-go/crypto/tinkcrypto/primitive/composite/keyio"

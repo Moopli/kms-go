@@ -24,8 +24,8 @@ import (
 	"github.com/trustbloc/bbs-signature-go/bbs12381g2pub"
 
 	ecdhpb "github.com/trustbloc/kms-go/crypto/tinkcrypto/primitive/proto/ecdh_aead_go_proto"
-	cryptoapi "github.com/trustbloc/kms-go/spi/crypto"
-	"github.com/trustbloc/kms-go/spi/kms"
+	cryptoapi "github.com/trustbloc/kms-go/internal/api/crypto"
+	"github.com/trustbloc/kms-go/internal/api/kms"
 	"github.com/trustbloc/kms-go/util/cryptoutil"
 )
 

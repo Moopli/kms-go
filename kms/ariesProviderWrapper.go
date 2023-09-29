@@ -10,7 +10,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/trustbloc/kms-go/spi/kms"
+	"github.com/trustbloc/kms-go/internal/api/kms"
 	"github.com/trustbloc/kms-go/spi/storage"
 )
 

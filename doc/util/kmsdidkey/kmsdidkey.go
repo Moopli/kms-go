@@ -19,8 +19,8 @@ import (
 	"github.com/trustbloc/kms-go/doc/util/fingerprint"
 	"github.com/trustbloc/kms-go/doc/util/jwkkid"
 
-	cryptoapi "github.com/trustbloc/kms-go/spi/crypto"
-	"github.com/trustbloc/kms-go/spi/kms"
+	cryptoapi "github.com/trustbloc/kms-go/internal/api/crypto"
+	"github.com/trustbloc/kms-go/internal/api/kms"
 )
 
 // keyTypeCodecs maps kms.KeyType to did:key codec.

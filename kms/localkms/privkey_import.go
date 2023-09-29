@@ -20,7 +20,7 @@ import (
 	tinkpb "github.com/google/tink/go/proto/tink_go_proto"
 	"github.com/trustbloc/bbs-signature-go/bbs12381g2pub"
 
-	"github.com/trustbloc/kms-go/spi/kms"
+	"github.com/trustbloc/kms-go/internal/api/kms"
 
 	"github.com/trustbloc/kms-go/crypto/tinkcrypto/primitive/composite/ecdh"
 	bbspb "github.com/trustbloc/kms-go/crypto/tinkcrypto/primitive/proto/bbs_go_proto"

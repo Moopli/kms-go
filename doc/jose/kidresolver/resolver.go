@@ -12,7 +12,7 @@ import (
 
 	"github.com/trustbloc/kms-go/doc/util/kmsdidkey"
 
-	cryptoapi "github.com/trustbloc/kms-go/spi/crypto"
+	cryptoapi "github.com/trustbloc/kms-go/internal/api/crypto"
 	"github.com/trustbloc/kms-go/spi/storage"
 )
 

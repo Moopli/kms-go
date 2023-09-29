@@ -26,7 +26,7 @@ import (
 	tinkpb "github.com/google/tink/go/proto/tink_go_proto"
 	"github.com/stretchr/testify/require"
 
-	cryptoapi "github.com/trustbloc/kms-go/spi/crypto"
+	cryptoapi "github.com/trustbloc/kms-go/internal/api/crypto"
 
 	"github.com/trustbloc/kms-go/crypto/tinkcrypto/primitive/composite/ecdh"
 	ecdhpb "github.com/trustbloc/kms-go/crypto/tinkcrypto/primitive/proto/ecdh_aead_go_proto"

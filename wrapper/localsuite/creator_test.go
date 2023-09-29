@@ -12,8 +12,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
+	kmsapi "github.com/trustbloc/kms-go/internal/api/kms"
 	mockkms "github.com/trustbloc/kms-go/mock/kms"
-	kmsapi "github.com/trustbloc/kms-go/spi/kms"
 )
 
 func TestKeyCreator(t *testing.T) {

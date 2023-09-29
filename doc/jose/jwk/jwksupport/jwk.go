@@ -23,8 +23,8 @@ import (
 	"github.com/trustbloc/bbs-signature-go/bbs12381g2pub"
 
 	"github.com/trustbloc/kms-go/doc/jose/jwk"
-	cryptoapi "github.com/trustbloc/kms-go/spi/crypto"
-	"github.com/trustbloc/kms-go/spi/kms"
+	cryptoapi "github.com/trustbloc/kms-go/internal/api/crypto"
+	"github.com/trustbloc/kms-go/internal/api/kms"
 )
 
 const (

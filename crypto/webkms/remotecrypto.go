@@ -23,7 +23,7 @@ import (
 	"github.com/bluele/gcache"
 	"github.com/google/tink/go/keyset"
 
-	cryptoapi "github.com/trustbloc/kms-go/spi/crypto"
+	cryptoapi "github.com/trustbloc/kms-go/internal/api/crypto"
 
 	"github.com/trustbloc/kms-go/crypto/tinkcrypto/primitive/composite/keyio"
 	webkmsimpl "github.com/trustbloc/kms-go/kms/webkms"

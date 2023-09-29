@@ -9,8 +9,8 @@ import (
 	webcrypto "github.com/trustbloc/kms-go/crypto/webkms"
 	"github.com/trustbloc/kms-go/doc/jose/jwk"
 	"github.com/trustbloc/kms-go/doc/jose/jwk/jwksupport"
+	"github.com/trustbloc/kms-go/internal/api/kms"
 	"github.com/trustbloc/kms-go/kms/webkms"
-	"github.com/trustbloc/kms-go/spi/kms"
 	wrapperapi "github.com/trustbloc/kms-go/wrapper/api"
 )
 
